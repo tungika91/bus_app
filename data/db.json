@@ -1,0 +1,41 @@
+{
+    "Services": [
+        {
+            "ServiceNo": "258",
+            "Operator": "SBST",
+            "NextBus": {
+                "OriginCode": "24009",
+                "DestinationCode": "24009",
+                "EstimatedArrival": "2023-06-17T20:45:51+08:00",
+                "Latitude": "1.3225241666666667",
+                "Longitude": "103.68535783333333",
+                "VisitNumber": "1",
+                "Load": "SEA",
+                "Feature": "WAB",
+                "Type": "SD"
+            },
+            "NextBus2": {
+                "OriginCode": "24009",
+                "DestinationCode": "24009",
+                "EstimatedArrival": "2023-06-17T21:06:47+08:00",
+                "Latitude": "1.3430545",
+                "Longitude": "103.70365266666667",
+                "VisitNumber": "1",
+                "Load": "SEA",
+                "Feature": "WAB",
+                "Type": "DD"
+            },
+            "NextBus3": {
+                "OriginCode": "24009",
+                "DestinationCode": "24009",
+                "EstimatedArrival": "2023-06-17T21:14:29+08:00",
+                "Latitude": "1.3428183333333332",
+                "Longitude": "103.703804",
+                "VisitNumber": "1",
+                "Load": "SEA",
+                "Feature": "WAB",
+                "Type": "DD"
+            }
+        }
+    ]
+}

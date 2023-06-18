@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +10,86 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  margin: 5;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.busNum {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  /* box-shadow: 2px 2px 5px #000; */
+  border-radius: 0.3rem;
+  display: grid;
+  place-content: center;
+}
+
+.arrival {
+  width: 300px;
+  height: 150px;
+  border: 2px solid #0cd510;
+  box-shadow: 2px 2px 5px #000;
+  border-radius: 0.3rem;
+  display: grid;
+  place-content: center;
+}
+
+.square p {
+  text-align: center;
+}
+
+form {
+  width: 400px;
+}
+
+label {
+  position: absolute;
+  left: -99999px;
+}
+
+input[type="text"] {
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+  width: 20%;
+  min-height: 50;
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px #000;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+  width: 10%;
+  min-height: 50;
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px #000;
+  background-color: #0cd510;
+  color: #000;
+  border-radius: 0.25rem;
+  outline: none;
 }
