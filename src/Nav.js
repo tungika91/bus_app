@@ -1,10 +1,12 @@
 import React from 'react'
 
-export default function Nav() {
+export default function Nav({ currentDate, busStopCode }) {
   return (
     <>
-      <input placeholder='253 or 258' type='text'></input>
-      <button>Select</button>
+        <h1>{busStopCode} - AFT BENOI SECTOR</h1>
+        <section>
+          <h2>{ currentDate.toString() }</h2>
+        </section>
     </>
   )
 }
