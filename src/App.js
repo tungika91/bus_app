@@ -12,7 +12,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   // const URL = `http://localhost:5000/users/api/busArrival/${busStopCode}`;
   const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
-  const config = {
+  const headers = {
     headers: {
       AccountKey : 'LLS5w+z5TuiSZjQQz/1FMw=='
     }
@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
       console.log(URL);
       setLoading(true);
-      axios.get(URL, config).then(res => {
+      axios.get(URL, headers).then(res => {
           setLoading(false);
           setBusStopCode(res.data.BusStopCode);
           setBuses(res.data.Services);
