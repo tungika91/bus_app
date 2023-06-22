@@ -19,7 +19,7 @@ function App() {
       axios.get(URL, {
         headers: {
           'AccountKey' : 'LLS5w+z5TuiSZjQQz/1FMw==',
-          'Access-Control-Allow-Origin': '*'
+          'accept': 'application/json',
         }
       }).then(res => {
           setLoading(false);
