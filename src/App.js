@@ -10,12 +10,18 @@ function App() {
   const [busStopCode, setBusStopCode] = useState('23021');
   const [buses, setBuses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const URL = `http://localhost:5000/users/api/busArrival/${busStopCode}`; //using json-server
+  // const URL = `http://localhost:5000/users/api/busArrival/${busStopCode}`;
+  const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
+  const config = {
+    headers: {
+      AccountKey : 'LLS5w+z5TuiSZjQQz/1FMw=='
+    }
+  }
 
   useEffect(() => {
-      console.log(URL);
+      // console.log(URL);
       setLoading(true);
-      axios.get(URL).then(res => {
+      axios.get(URL, config).then(res => {
           setLoading(false);
           setBusStopCode(res.data.BusStopCode);
           setBuses(res.data.Services);
