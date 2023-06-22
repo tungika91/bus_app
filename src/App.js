@@ -19,7 +19,7 @@ function App() {
   }
 
   useEffect(() => {
-      // console.log(URL);
+      console.log(URL);
       setLoading(true);
       axios.get(URL, config).then(res => {
           setLoading(false);
