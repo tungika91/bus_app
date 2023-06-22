@@ -12,6 +12,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   // const URL = `http://localhost:5000/users/api/busArrival/${busStopCode}`;
   const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
+  const config = {
+    headers:{
+      header1: value1,
+      header2: value2
+    }
+  };
   const headers = {
     headers: {
       AccountKey : 'LLS5w+z5TuiSZjQQz/1FMw=='
@@ -23,7 +29,8 @@ function App() {
       setLoading(true);
       axios.get(URL, {
         headers: {
-          AccountKey : 'LLS5w+z5TuiSZjQQz/1FMw=='
+          'AccountKey' : 'LLS5w+z5TuiSZjQQz/1FMw==',
+          'Access-Control-Allow-Origin': '*'
         }
       }).then(res => {
           setLoading(false);
