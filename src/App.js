@@ -11,7 +11,7 @@ function App() {
   const [buses, setBuses] = useState([]);
   const [loading, setLoading] = useState(true);
   // const URL = `http://localhost:5000/users/api/busArrival/${busStopCode}`;
-  const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
+  const URL = `${busStopCode}`;
 
   useEffect(() => {
       console.log(URL);
