@@ -13,7 +13,7 @@ export default function ArrivalTime({ busTime }) {
             className='arrival'
             style={{
                 backgroundColor: "#FFF",
-                color: '#6d716d',
+                color: '#000',
                 fontSize: 65
             }}>
             <p>{ duration }</p> </section> 

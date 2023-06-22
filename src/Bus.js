@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
 import Arrival from './Arrival';
 import BusNum from './BusNum';
 
-export default function Bus( { busNum, nextBusTime, nextBusTime2, nextBusTime3} ) {
-    return (
-        <>
-            <BusNum busNum = { busNum }/>
-            <br/>
-            <Arrival busTime = { nextBusTime }/>
-            <Arrival busTime = { nextBusTime2 }/>
-            <Arrival busTime = { nextBusTime3 }/>
+export default function Bus( { bus } ) {
 
-        </>
-  )
+    return (
+        <div className = 'flexbox-container'>
+            <BusNum busNum = { bus.ServiceNo } />
+            <Arrival busTime = { bus.NextBus.EstimatedArrival } />
+            <Arrival busTime = { bus.NextBus2.EstimatedArrival } />
+            <Arrival busTime = { bus.NextBus3.EstimatedArrival } />
+        </div>
+    )
 }
 
