@@ -8,7 +8,6 @@ import Nav from './Nav';
 function App() {
   const currentDate = new Date()
   const [busStopCode, setBusStopCode] = useState('23021');
-  const [busStopName, setBusStopName] = useState('');
   const [buses, setBuses] = useState([]);
   const [loading, setLoading] = useState(true);
   const URL = `http://localhost:5000/users/api/busArrival/${busStopCode}`; //using json-server
@@ -34,8 +33,7 @@ function App() {
         currentDate = { currentDate }
         busStopCode = { busStopCode }/>
       <Header 
-        setBusStopCode = { setBusStopCode }
-        setBusStopName = { setBusStopName } />
+        setBusStopCode = { setBusStopCode }/>
 
       {buses.map(bus => (
           <Bus bus={bus} />
