@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css';
 import Header from './Header';
+import Bookmark from './Bookmark';
 import Bus from './Bus';
 import Nav from './Nav';
 
@@ -10,9 +10,7 @@ function App() {
   const [busStopCode, setBusStopCode] = useState('23021');
   const [buses, setBuses] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const URL = `tungika91.pythonanywhere.com/api/busArrival/${busStopCode}`;
   const URL = 'https://tungika91.pythonanywhere.com/api/busArrival/';
-  // const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
 
   useEffect(() => {
       // console.log(URL+busStopCode);
@@ -38,7 +36,9 @@ function App() {
         busStopCode = { busStopCode }/>
       <Header 
         setBusStopCode = { setBusStopCode }/>
-
+      <br/>
+      <Bookmark 
+        setBusStopCode = { setBusStopCode }/>
       {buses.map(bus => (
           <Bus bus={bus}/>
       ))}

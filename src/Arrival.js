@@ -14,7 +14,7 @@ export default function ArrivalTime({ busTime }) {
             style={{
                 backgroundColor: "#FFF",
                 color: '#000',
-                fontSize: 65
+ 
             }}>
             <p>{ duration }</p> </section> 
             : <section 
@@ -22,7 +22,7 @@ export default function ArrivalTime({ busTime }) {
             style={{
                 backgroundColor: "#FFF",
                 color: '#d50c0c',
-                fontSize: 65
+
             }}>
             <p>{ duration }</p> </section>
       }

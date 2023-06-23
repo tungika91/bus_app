@@ -6,12 +6,10 @@ export default function Nav({ currentDate, busStopCode }) {
   const time = currentDate.getHours() + ':' + currentDate.getMinutes();
   
   return (
-    <div className='container'>
+    <div className='Header'>
       <div className='topright'>
           <h1>Bus Stop: {busStopCode} </h1>
-          <br/>
           <h2> { time } <br/> { date } { month }</h2>
-          {/* <h1>{ date } { month }</h1> */}
       </div>
     </div>
   )
