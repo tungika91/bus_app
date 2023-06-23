@@ -10,8 +10,8 @@ function App() {
   const [busStopCode, setBusStopCode] = useState('23021');
   const [buses, setBuses] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const URL = `tungika91.pythonanywhere.com/api/busArrival/${busStopCode}`;
-  const URL = 'https://tungika91.pythonanywhere.com/api/busArrival/23021';
+  const URL = `tungika91.pythonanywhere.com/api/busArrival/${busStopCode}`;
+  // const URL = 'https://tungika91.pythonanywhere.com/api/busArrival/23021';
   // const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
 
   useEffect(() => {
