@@ -6,25 +6,33 @@ export default function ArrivalTime({ busTime }) {
   let duration = moment(busTime).diff(currentTime,'minutes')
   const walkingMinutes = 6
   let isWalkable = walkingMinutes < duration
+  let isArrived = duration < 2
+  
   return (
     <>
-      {
-        isWalkable ? <section 
+      {isWalkable && !isArrived
+        ? <section 
             className='arrival'
             style={{
                 backgroundColor: "#FFF",
-                color: '#000',
- 
-            }}>
-            <p>{ duration }</p> </section> 
-            : <section 
+                color: '#000'}}>
+            <p>{ duration }</p> 
+        </section> : 
+        !isWalkable && isArrived 
+        ? <section 
+        className='arrival'
+        style={{
+            backgroundColor: "#FFF",
+            color: '#d50c0c'}}>
+        <p>Arr</p> 
+        </section>:
+        <section 
             className='arrival'
             style={{
                 backgroundColor: "#FFF",
-                color: '#d50c0c',
-
-            }}>
-            <p>{ duration }</p> </section>
+                color: '#d50c0c'}}>
+            <p>{ duration }</p> 
+        </section>
       }
     </>
   )
