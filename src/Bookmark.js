@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
 
 export default function Bookmark( { setBusStopCode } ) {
-    const busCode = useRef();
-
     function select253() {
         setBusStopCode('23209');
     }
