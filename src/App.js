@@ -10,24 +10,24 @@ function App() {
   const [busStopCode, setBusStopCode] = useState('23021');
   const [buses, setBuses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const URL = `tungika91.pythonanywhere.com/api/busArrival/${busStopCode}`;
-  // const URL = 'https://tungika91.pythonanywhere.com/api/busArrival/23021';
+  // const URL = `tungika91.pythonanywhere.com/api/busArrival/${busStopCode}`;
+  const URL = 'https://tungika91.pythonanywhere.com/api/busArrival/';
   // const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
 
   useEffect(() => {
-      console.log(URL);
+      // console.log(URL+busStopCode);
       setLoading(true);
-      axios.get(URL)
+      axios.get(URL+busStopCode)
       .then(res => {
           setLoading(false);
-          setBusStopCode(res.data.BusStopCode);
+          // setBusStopCode(res.data.BusStopCode);
           setBuses(res.data.Services);
           console.log(res.data);
       })
       .catch((error) => {
         console.log(error)
       })
-  }, [URL])
+  }, [busStopCode])
 
   if (loading) return '...Loading'
 
@@ -40,7 +40,7 @@ function App() {
         setBusStopCode = { setBusStopCode }/>
 
       {buses.map(bus => (
-          <Bus bus={bus} />
+          <Bus bus={bus}/>
       ))}
     </>
   );
