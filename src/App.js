@@ -14,6 +14,7 @@ function App() {
   // const URL = `http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${busStopCode}`;
 
   useEffect(() => {
+      console.log(URL);
       setLoading(true);
       axios.get(URL)
       .then(res => {
