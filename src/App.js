@@ -14,12 +14,10 @@ function App() {
   const URL = 'https://tungika91.pythonanywhere.com/api/busArrival/';
 
   useEffect(() => {
-      // console.log(URL+busStopCode);
       setLoading(true);
       axios.get(URL+busStopCode)
       .then(res => {
           setLoading(false);
-          // setBusStopCode(res.data.BusStopCode);
           setBuses(res.data.Services);
           console.log(res.data);
       })
