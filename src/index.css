@@ -144,9 +144,10 @@ button.select {
   justify-content: space-between;
   align-items: center;
   /* margin-top: 0.5rem;   */
+  top: 0;
   left: 0;
   color: #FFF;
-  position: absolute;
+  position: fixed;
 }
 
 .Footer {
