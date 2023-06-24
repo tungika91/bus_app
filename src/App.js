@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './Header';
+import Footer from './Footer';
 import Bookmark from './Bookmark';
 import Bus from './Bus';
 import Nav from './Nav';
@@ -42,6 +43,7 @@ function App() {
       {buses.map(bus => (
           <Bus bus={bus}/>
       ))}
+      <Footer />
     </>
   );
 }

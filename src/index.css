@@ -52,7 +52,8 @@ body {
   margin-right: 0.5rem;
   margin-top: 0.5rem;
   font-size: 2rem;
-
+  background-color: #BCFD4C;
+  color: #000;
 }
 
 .arrival {
@@ -68,7 +69,7 @@ body {
   font-size: 2rem;
 }
 
-.Header, .Footer {
+.Header {
   width: 100%;
   height: 100px;
   /* background-color: #e1b382; */
@@ -108,7 +109,7 @@ button {
   width: 25%;
   min-height: 50;
   font-size: 1rem;
-  background-color: orange;
+  background-color: #FDB04C;
   color: #000;
   border-radius: 0.25rem;
   outline: none;
@@ -125,7 +126,7 @@ button.select {
   width: 25%;
   min-height: 50;
   font-size: 1rem;
-  background-color: rgb(204, 255, 0);
+  background-color: #FDF74C;
   color: #000;
   box-shadow: 1px 1px 2px #000;
   border-radius: 0.3rem;
@@ -137,12 +138,31 @@ button.select {
 .topright {
   width: 100%;
   height: 100px;
-  background-color: #78d86e;
+  background-color: #6E6E6E;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;  
+  left: 0;
+  color: #FFF
+}
+
+.Footer {
+  width: 100%;
+  height: 50px;
+  background-color: #6E6E6E;
+  color: #FFF;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;  
+  display: grid;
+  place-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 h1 {  
@@ -160,5 +180,4 @@ h2{
   line-height: 1;
   margin: 0px 0px 0 50px;
   padding-top: 0px; 
-
  }
