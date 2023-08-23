@@ -13,7 +13,7 @@ export default function Nav({ currentDate, busStopCode }) {
   return (
     <div className='Header'>
       <div className='topright'>
-          <h1>Bus Stop: {busStopCode} </h1>
+          <h1>Bus Stop <br/>{busStopCode} </h1>
           <button onClick = { handleRefresh }><IoReloadCircle/></button>
           <h2> {hour<10 ? '0' : ''}{ hour }:{minute < 10 ? '0' : ''}{ minute } <br/> { date } { month.substring(0,3) }</h2>
       </div>
