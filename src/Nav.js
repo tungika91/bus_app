@@ -11,7 +11,7 @@ export default function Nav({ currentDate, busStopCode }) {
     <div className='Header'>
       <div className='topright'>
           <h1>Bus Stop: {busStopCode} </h1>
-          <h2> {hour<10?'0':''}{ hour }:{minute<10?'0':''}{ minute } <br/> { date } { month }</h2>
+          <h2> {hour<10 ? '0' : ''}{ hour }:{minute < 10 ? '0' : ''}{ minute } <br/> { date } { month.substring(0,3) }</h2>
       </div>
     </div>
   )
