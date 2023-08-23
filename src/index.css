@@ -150,6 +150,16 @@ button.select {
   position: fixed;
 }
 
+.topright button {
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: none;
+  background-color: #6E6E6E;
+  display: inline;
+  flex-direction: row;  
+  color: #BCFD4C;
+}
+
 .Footer {
   width: 100%;
   height: 50px;
